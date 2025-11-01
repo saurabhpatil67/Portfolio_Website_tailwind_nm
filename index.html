@@ -5,39 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website Tailwind CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- NAVBAR  -->
 
-     <header>
-        <nav>
+     <header class="fixed top-0 left-0 right-0 z-10">
+        <nav class="flex justify-between my-container h-24 items-center text-white">
            <!-- LOGO  -->
-            <a href="#">Ahmed.</a>
+            <a href="#" class="logo text-3xl font-bold " >Ahmed.</a>
 
             <!-- DESKTOP MENU  -->
-             <ul>
+             <ul class="md:flex items-center gap-14 hidden">
                 <li>
-                    <a href="#home">home</a>
+                    <a href="#home" class="uppercase text-[14px]">home</a>
                 </li>
                 <li>
-                    <a href="#about">about</a>
+                    <a href="#about" class="uppercase text-[14px]">about</a>
                 </li>
                 <li>
-                    <a href="#whatido">what i do</a>
+                    <a href="#whatido" class="uppercase text-[14px]">what i do</a>
                 </li>
                 <li>
-                    <a href="#Works">Works</a>
+                    <a href="#Works" class="uppercase text-[14px]">Works</a>
                 </li>
                 <li>
-                    <a href="#blog">blog</a>
+                    <a href="#blog" class="uppercase text-[14px]">blog</a>
                 </li>
                 <li>
-                    <a href="#contact">contact</a>
+                    <a href="#contact" class="uppercase text-[14px]">contact</a>
                 </li>
              </ul>
 
              <!-- HAMBURGER -->
-             <a href="#">
+             <a href="#" class="text-2xl md:hidden">
                 <i class="fa-solid fa-bars"></i>
              </a>
         </nav>
@@ -47,34 +49,34 @@
 
      <main>
          <!-- HERO SECTION  -->
-          <section>
-            <div>
-                <h1>Developer</h1>
+          <section class="flex items-center justify-center bg-[url(/Images/hero-bg.jpg)] h-screen bg-center bg-cover">
+            <div class="my-container">
+                <h1 class="text-7xl md:text-8xl text-white font-semibold tracking-tighter h-30">Developer</h1>
 
                 <!-- SOCIAL ICON  -->
-                 <ul>
+                 <ul class=" flex items-center justify-center gap-8">
                     <li>
-                        <a href="#">
+                        <a href="#" class="text-white text-xl hover:text-gray-300">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="text-white text-xl hover:text-gray-300">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="text-white text-xl hover:text-gray-300">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="text-white text-xl hover:text-gray-300">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="text-white text-xl hover:text-gray-300">
                             <i class="fa-brands fa-google-plus-g"></i>
                         </a>
                     </li>
@@ -86,76 +88,76 @@
           <!-- ABOUT SECTION  -->
 
           <section>
-            <div>
-                <img src="/Images/profile.jpg" >
+            <div class="my-container section-pb flex md:flex-row flex-col items-center gap-10">
+                <img src="/Images/profile.jpg" class="w-full md:w-1/3 ">
 
                 <div>
-                    <h2>
+                    <h2 class="text-neutral-800 text-4xl/12 md:text-5xl/16 md:max-w-xl">
                         I'm QJ Ahmed, Web Designer & Web Developer from India, Mumbai.
                     </h2>
-                    <p>
+                    <p class="text-gray-500 mt-8 mb-15 text-sm/7 md:text-base/9">
                         I have rich experience in web site design & building and customization.
                         Also I am  good at html, css, javascript, wordpress, php, jquery, bootstrap.
                         I love to talk with you about our unique approach. Feel free to contact me writing an email with your project idea.
                     </p>
-                    <a href="#">Download Resume</a>
+                    <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Download Resume</a>
                 </div>
             </div>
           </section>
 
           <!-- WHAT  I DO SECTION  -->
-           <section>
-            <div>
-                <h3>What I Do</h3>
+           <section class="bg-gray-100">
+            <div class="my-container section-pb">
+                <h3 class="text-4xl text-neutral-800 ">What I Do</h3>
 
-                <div>
-                    <div>
-                        <i class="fa-solid fa-layer-group"></i>
-                        <h5>UI/UX Design</h5>
-                        <p>
+                <div class="flex mt-10 gap-14">
+                    <div >
+                        <i class="fa-solid fa-layer-group text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">UI/UX Design</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                     </div>
                     <div>
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <h5>Brands Identity</h5>
-                        <p>
+                        <i class="fa-solid fa-lightbulb text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Brands Identity</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                     </div>
                     <div>
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <h5>Web Design</h5>
-                        <p>
+                        <i class="fa-solid fa-wand-magic-sparkles text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Web Design</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                     </div>
                 </div>
 
-                <div>
+                <div class="flex mt-10 gap-14">
                     <div>
-                        <i class="fa-brands fa-android"></i>
-                        <h5>Mobile App</h5>
-                        <p>
+                        <i class="fa-brands fa-android text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Mobile App</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                     </div>
                     <div>
-                        <i class="fa-solid fa-chart-simple"></i>
-                        <h5>Analytics</h5>
-                        <p>
+                        <i class="fa-solid fa-chart-simple text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Analytics</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                     </div>
                     <div>
-                        <i class="fa-solid fa-camera"></i>
-                        <h5>Photography</h5>
-                        <p>
+                        <i class="fa-solid fa-camera text-4xl text-yellow-400"></i>
+                        <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Photography</h5>
+                        <p class="text-gray-400 text-sm">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptan
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
@@ -167,8 +169,8 @@
            <!-- RECENT WORK SECTION  -->
 
            <section>
-            <div>
-                <h3>Recent Works</h3>
+            <div class="my-container section-pb">
+                <h3 class="text-4xl text-neutral-800 ">Recent Works</h3>
 
                 <div>
                     <a href="#">
@@ -199,7 +201,7 @@
            <!-- BLOGS SECTION  -->
             <section>
                 <div>
-                    <h3>Latest Blogs</h3>
+                    <h3 class="text-4xl text-neutral-800 ">Latest Blogs</h3>
 
                     <div>
                         <div>
@@ -211,7 +213,7 @@
                             </p>
 
                             <div>
-                                <a href="#">Read More</a>
+                                <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
                                 <span>January, 28 2026</span>
                             </div>
                         </div>
@@ -225,7 +227,7 @@
                             </p>
 
                             <div>
-                                <a href="#">Read More</a>
+                                <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
                                 <span>January, 28 2026</span>
                             </div>
                         </div>
@@ -239,7 +241,7 @@
                             </p>
 
                             <div>
-                                <a href="#">Read More</a>
+                                <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
                                 <span>January, 28 2026</span>
                             </div>
                         </div>
@@ -251,7 +253,7 @@
 
             <section>
                 <div>
-                    <h3>Contact Us</h3>
+                    <h3 class="text-4xl text-neutral-800 ">Contact Us</h3>
 
                     <form>
                         <div>
@@ -266,7 +268,7 @@
                             <textarea name="message" placeholder="Message"></textarea>
                         </div>
                         <div>
-                            <a href="#">Send Message</a>
+                            <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Send Message</a>
                         </div>
                     </form>
                 </div>
