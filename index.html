@@ -4,54 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website Tailwind CSS</title>
+    <!-- Font Awesome CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- CSS file  -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Typing JS CDN  -->
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+     <!-- Tailwind CDN  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- NAVBAR  -->
 
-     <header class="fixed top-0 left-0 right-0 z-10">
-        <nav class="flex justify-between my-container h-24 items-center text-white">
+     <header id="navbar" class="fixed top-0 left-0 right-0 z-10 text-white">
+        <nav class="flex justify-between items-center my-container h-24">
            <!-- LOGO  -->
             <a href="#" class="logo text-3xl font-bold " >Ahmed.</a>
 
             <!-- DESKTOP MENU  -->
              <ul class="md:flex items-center gap-14 hidden">
                 <li>
-                    <a href="#home" class="uppercase text-[14px]">home</a>
+                    <a href="#home" class="uppercase text-[14px] hover:text-yellow-400">home</a>
                 </li>
                 <li>
-                    <a href="#about" class="uppercase text-[14px]">about</a>
+                    <a href="#about" class="uppercase text-[14px] hover:text-yellow-400">about</a>
                 </li>
                 <li>
-                    <a href="#whatido" class="uppercase text-[14px]">what i do</a>
+                    <a href="#whatido" class="uppercase text-[14px] hover:text-yellow-400">what i do</a>
                 </li>
                 <li>
-                    <a href="#Works" class="uppercase text-[14px]">Works</a>
+                    <a href="#works" class="uppercase text-[14px] hover:text-yellow-400">Works</a>
                 </li>
                 <li>
-                    <a href="#blog" class="uppercase text-[14px]">blog</a>
+                    <a href="#blog" class="uppercase text-[14px] hover:text-yellow-400">blog</a>
                 </li>
                 <li>
-                    <a href="#contact" class="uppercase text-[14px]">contact</a>
+                    <a href="#contact" class="uppercase text-[14px] hover:text-yellow-400">contact</a>
                 </li>
              </ul>
 
              <!-- HAMBURGER -->
-             <a href="#" class="text-2xl md:hidden">
+             <a href="#" id="burger" class="text-2xl md:hidden">
                 <i class="fa-solid fa-bars"></i>
              </a>
         </nav>
      </header>
 
+     
+    <!-- MOBILE  MENU -->
+     <ul id="menu" class="flex flex-col items-center justify-center gap-14  md:hidden absolute left-0 top-0 bottom-0 bg-white w-60
+     -translate-x-full transition:transform duration-300">
+                <li>
+                    <a href="#home" class="uppercase text-[14px] hover:text-yellow-400">home</a>
+                </li>
+                <li>
+                    <a href="#about" class="uppercase text-[14px] hover:text-yellow-400">about</a>
+                </li>
+                <li>
+                    <a href="#whatido" class="uppercase text-[14px] hover:text-yellow-400">what i do</a>
+                </li>
+                <li>
+                    <a href="#works" class="uppercase text-[14px] hover:text-yellow-400">Works</a>
+                </li>
+                <li>
+                    <a href="#blog" class="uppercase text-[14px] hover:text-yellow-400">blog</a>
+                </li>
+                <li>
+                    <a href="#contact" class="uppercase text-[14px] hover:text-yellow-400">contact</a>
+                </li>
+             </ul>
+
+
      <!-- SECTION START HERE  -->
 
      <main>
          <!-- HERO SECTION  -->
-          <section class="flex items-center justify-center bg-[url(/Images/hero-bg.jpg)] h-screen bg-center bg-cover">
+          <section id="home" class="flex items-center justify-center bg-[url(/Images/hero-bg.jpg)] h-screen bg-center bg-cover">
             <div class="my-container">
-                <h1 class="text-7xl md:text-8xl text-white font-semibold tracking-tighter h-30">Developer</h1>
+                <h1 id="typing" class="text-7xl md:text-8xl text-white font-semibold tracking-tighter h-28 md:h-35"></h1>
 
                 <!-- SOCIAL ICON  -->
                  <ul class=" flex items-center justify-center gap-8">
@@ -87,7 +120,7 @@
 
           <!-- ABOUT SECTION  -->
 
-          <section>
+          <section id="about">
             <div class="my-container section-pb flex md:flex-row flex-col items-center gap-10">
                 <img src="/Images/profile.jpg" class="w-full md:w-1/3 ">
 
@@ -106,11 +139,11 @@
           </section>
 
           <!-- WHAT  I DO SECTION  -->
-           <section class="bg-gray-100">
+           <section id="whatido" class="bg-gray-100">
             <div class="my-container section-pb">
                 <h3 class="text-4xl text-neutral-800 ">What I Do</h3>
 
-                <div class="flex mt-10 gap-14">
+                <div class="flex md:flex-row flex-col mt-10 gap-14">
                     <div >
                         <i class="fa-solid fa-layer-group text-4xl text-yellow-400"></i>
                         <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">UI/UX Design</h5>
@@ -137,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="flex mt-10 gap-14">
+                <div class="flex md:flex-row flex-col mt-10 gap-14">
                     <div>
                         <i class="fa-brands fa-android text-4xl text-yellow-400"></i>
                         <h5 class="text-neutral-800 text-sm tracking-widest my-3 font-semibold uppercase">Mobile App</h5>
@@ -168,30 +201,30 @@
 
            <!-- RECENT WORK SECTION  -->
 
-           <section>
+           <section id="works">
             <div class="my-container section-pb">
                 <h3 class="text-4xl text-neutral-800 ">Recent Works</h3>
 
-                <div>
-                    <a href="#">
+                <div class=" flex md:flex-row flex-col gap-14 mt-14">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project1.jpg" >
                     </a>
-                    <a href="#">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project2.jpg" >
                     </a>
-                    <a href="#">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project3.jpg" >
                     </a>
                 </div>
 
-                <div>
-                    <a href="#">
+                <div class=" flex md:flex-row flex-col gap-14 mt-14">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project4.jpg" >
                     </a>
-                    <a href="#">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project5.jpg" >
                     </a>
-                    <a href="#">
+                    <a href="#" class="hover:-translate-y-3 transition:transform duration-300">
                         <img src="/Images/project6.jpg" >
                     </a>
                 </div>
@@ -199,50 +232,50 @@
            </section>
 
            <!-- BLOGS SECTION  -->
-            <section>
-                <div>
+            <section id="blog" class="bg-gray-100">
+                <div class="my-container section-pb">
                     <h3 class="text-4xl text-neutral-800 ">Latest Blogs</h3>
 
-                    <div>
+                    <div class="flex md:flex-row flex-col gap-14 mt-14">
                         <div>
                             <img src="/Images/blog1.jpg" >
-                            <h4>Create a landing page that performs great</h4>
-                            <p>
+                            <h4 class="text-xl text-neutral-800 font-semibold mt-8 uppercase">Create a landing page that performs great</h4>
+                            <p class="text-gray-400 text-sm/7 mt-3">
                                 Quick six blind out burst. Perfectly on furniture dejection
                                 determine my depending an to. Add short water court fat.
                             </p>
 
-                            <div>
+                            <div class="mt-10 flex justify-between items-center">
                                 <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
-                                <span>January, 28 2026</span>
+                                <span class="text-sm text-gray-400">January, 28 2026</span>
                             </div>
                         </div>
 
                         <div>
                             <img src="/Images/blog2.jpg" >
-                            <h4>Starting and growing a career in web design</h4>
-                            <p>
+                            <h4 class="text-xl text-neutral-800 font-semibold mt-8 uppercase">Starting and growing a career in web design</h4>
+                            <p class="text-gray-400 text-sm/7 mt-3">
                                 Quick six blind out burst. Perfectly on furniture dejection
                                 determine my depending an to. Add short water court fat.
                             </p>
 
-                            <div>
+                            <div class="mt-10 flex justify-between items-center">
                                 <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
-                                <span>January, 28 2026</span>
+                                <span class="text-sm text-gray-400">January, 28 2026</span>
                             </div>
                         </div>
 
                         <div>
                             <img src="/Images/blog3.jpg" >
-                            <h4>HOw can designers prepare for the future?</h4>
-                            <p>
+                            <h4 class="text-xl text-neutral-800 font-semibold mt-8 uppercase">HOw can designers prepare for the future?</h4>
+                            <p class="text-gray-400 text-sm/7 mt-3">
                                 Quick six blind out burst. Perfectly on furniture dejection
                                 determine my depending an to. Add short water court fat.
                             </p>
 
-                            <div>
+                            <div class="mt-10 flex justify-between items-center">
                                 <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Read More</a>
-                                <span>January, 28 2026</span>
+                                <span class="text-sm text-gray-400">January, 28 2026</span>
                             </div>
                         </div>
                     </div>
@@ -251,23 +284,23 @@
 
             <!-- CONTACT SECTION  -->
 
-            <section>
-                <div>
+            <section id="contact">
+                <div class="my-container section-pb">
                     <h3 class="text-4xl text-neutral-800 ">Contact Us</h3>
 
                     <form>
-                        <div>
-                            <input type="text" name="name" placeholder="Name" autocomplete="off">
-                            <input type="text" name="number" placeholder="Number">
+                        <div class=" flex md:flex-row flex-col mt-10 gap-10">
+                            <input type="text" name="name" placeholder="Name" autocomplete="off"  class="field flex-1 border-b-2 border-gray-200 py-3 placeholder-gray-500 text-sm">
+                            <input type="text" name="number" placeholder="Number" class="field flex-1 border-b-2 border-gray-200 py-3 placeholder-gray-500 text-sm">
                         </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Email" autocomplete="off">
-                            <input type="text" name="subject" placeholder="Subject">
+                        <div  class="flex md:flex-row flex-col mt-10  gap-10">
+                            <input type="email" name="email" placeholder="Email" autocomplete="off" class="field flex-1 border-b-2 border-gray-200 py-3 placeholder-gray-500 text-sm">
+                            <input type="text" name="subject" placeholder="Subject" class="field flex-1 border-b-2 border-gray-200 py-3 placeholder-gray-500 text-sm">
                         </div>
-                        <div>
-                            <textarea name="message" placeholder="Message"></textarea>
+                        <div class="mt-10 ">
+                            <textarea name="message" placeholder="Message" class="field resize-none w-full h-32 border-b-2 border-gray-200 placeholder-gray-500 text-sm"></textarea>
                         </div>
-                        <div>
+                        <div class="mt-10">
                             <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-300">Send Message</a>
                         </div>
                     </form>
@@ -277,41 +310,43 @@
 
      <!-- FOOTER START HERE  -->
 
-     <footer>
-        <div>
+     <footer class="bg-gray-100">
+        <div class="flex flex-col items-center justify-center py-15 text-center">
             <!-- SOCIAL ICON  -->
-                 <ul>
-                    <li>
-                        <a href="#">
+                 <ul class="flex gap-5">
+                    <li  class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10  hover:border-neutral-800 transition:all duration-300">
+                        <a href="#" class="text-neutral-800 text-xl ">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10  hover:border-neutral-800 transition:all duration-300">
+                        <a href="#" class="text-neutral-800 text-xl ">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10  hover:border-neutral-800 transition:all duration-300">
+                        <a href="#" class="text-neutral-800 text-xl ">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10  hover:border-neutral-800 transition:all duration-300">
+                        <a href="#" class="text-neutral-800 text-xl ">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition:all duration-300">
+                        <a href="#" class="text-neutral-800 text-xl ">
                             <i class="fa-brands fa-google-plus-g"></i>
                         </a>
                     </li>
                  </ul>
 
-                 <div>
-                    <p>&copy; 2026 Ahmed. all rights reserved.</p>
+                 <div class="mt-5">
+                    <p class="text-5 text-gray-500">&copy; 2026 Ahmed. all rights reserved.</p>
                  </div>
         </div>
      </footer>
+
+    <script src="/script.js"></script>
 </body>
 </html>

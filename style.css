@@ -21,3 +21,23 @@ h2,
 h3{
     font-family: "Kaushan Script", cursive
 }
+
+.field:focus{
+    outline: none;
+    border-bottom-color: rgb(38, 38, 38);
+}
+
+.field:focus::placeholder{
+    color:rgb(38, 38, 38) ;
+}
+
+.navbar-styling{
+    color: rgb(38, 38, 38);
+    background: #fff;
+    box-shadow: 5px 20px 50px 0 rgba(100, 100, 111, 0.1);
+}
+
+html{
+
+    scroll-behavior: smooth;
+}
