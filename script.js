@@ -6,9 +6,9 @@ const bars = document.querySelector('.fa-bars');
 
 document.addEventListener('scroll', () => {
 
-    if(window.scrollY > 0){
+    if (window.scrollY > 0) {
         navBar.classList.add('navbar-styling');
-    }else{
+    } else {
         navBar.classList.remove('navbar-styling');
     }
 })
@@ -20,10 +20,20 @@ burger.addEventListener('click', () => {
     bars.classList.toggle('fa-xmark');
 })
 
-var typed = new Typed('#typing', {
-      strings: ['Developer','Freelancer', 'Designer', 'Photographer','Coder'],
-      typeSpeed: 30,
-      loop:true,
-      backDelay:3000,
-      showCursor:false,
+document.addEventListener("DOMContentLoaded", function () {
+    var typed = new Typed('#typing', {
+        strings: ['Developer', 'Freelancer', 'Designer', 'Photographer', 'Coder'],
+        typeSpeed: 30,
+        loop: true,
+        backDelay: 3000,
+        showCursor: false,
     });
+});
+
+// var typed = new Typed('#typing', {
+//       strings: ['Developer','Freelancer', 'Designer', 'Photographer','Coder'],
+//       typeSpeed: 30,
+//       loop:true,
+//       backDelay:3000,
+//       showCursor:false,
+//     });
