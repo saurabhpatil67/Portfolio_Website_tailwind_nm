@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true,
         backDelay: 3000,
         showCursor: false,
+       
     });
 });
 
@@ -36,4 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //       loop:true,
 //       backDelay:3000,
 //       showCursor:false,
+       
 //     });
+
+    //  console.log(typeof typed)
